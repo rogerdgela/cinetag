@@ -1,8 +1,8 @@
 import Banner from "components/Banner";
 import Card from "components/Card";
 import Titulo from "components/Titulo";
-import Videos from "json/db.json";
-import styles from "./Inicio.module.css";
+import videos from 'json/db.json';
+import styles from './Inicio.module.css';
 
 function Inicio() {
     return (
@@ -12,11 +12,9 @@ function Inicio() {
                 <h1>Um lugar para guardar seus vídeos e filmes!</h1>
             </Titulo>
             <section className={styles.container}>
-                {
-                    Videos.map((video) => {
-                        return <Card {...video} key={video.id} />
-                    })
-                }
+                {videos.map((video) => {
+                    return <Card {...video} key={video.id} />
+                })}
             </section>
         </>
     )

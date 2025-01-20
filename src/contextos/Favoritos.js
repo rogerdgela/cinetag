@@ -24,15 +24,12 @@ export function useFavoritoContext() {
 
         if (!favoritoRepetido) {
             novaLista.push(novoFavorito);
-            
             return setFavorito(novaLista);
         }
 
         novaLista.splice(novaLista.indexOf(novoFavorito), 1);
-
         return setFavorito(novaLista);
     }
-
     return {
         favorito,
         adicionarFavorito
